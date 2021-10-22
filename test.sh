@@ -9,7 +9,7 @@ clean() {
 
 if [[ $1 = "clean" ]]; then
     clean
-    exit
+    exit 0
 fi
 
 cd src
