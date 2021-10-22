@@ -46,8 +46,15 @@ unsigned int count(PToMySet p_set, ValueType val)
     return (LLRB_find(p_set->tree, val) ? 1 : 0);
 }
 
-void print(PToMySet s)
+void print(PToMySet p_set)
 {
-    LLRB_print(s->tree);
+    LLRB_print(p_set->tree);
     printf("\n");
+}
+
+void delete(PToMySet *p_set)
+{
+    clear(*p_set);
+    free(*p_set);
+    *p_set = NULL;
 }

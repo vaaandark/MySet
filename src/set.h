@@ -27,6 +27,7 @@ void clear(PToMySet p_set);
 void insert(PToMySet p_set, ValueType val);
 unsigned int erase(PToMySet p_set, ValueType val);
 unsigned int count(PToMySet p_set, ValueType val);
+void delete(PToMySet* p_set);
 
 void print(PToMySet p_set);
 

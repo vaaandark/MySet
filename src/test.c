@@ -24,5 +24,7 @@ int main(void)
     }
     printf("finally: \n");
     print(s);
+
+    delete(&s);
     return 0;
 }
