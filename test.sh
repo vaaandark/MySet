@@ -7,10 +7,12 @@ clean() {
     rm STLSet/stl_set generator/generator input my_set.out stl_set.out
 }
 
-if [[ $1 = "clean" ]]; then
-    clean
-    exit 0
-fi
+case "$1" in
+    clean)
+        clean
+        exit 0;;
+    
+esac
 
 cd src
 make
