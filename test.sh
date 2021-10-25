@@ -27,6 +27,12 @@ gcc -o generator/generator generator/generator.c
 ./src/my_set < input > my_set.out
 ./STLSet/stl_set < input > stl_set.out
 
-if [ "diff my_set.out stl_set.out > err.log" ]; then
+diff my_set.out stl_set.out
+
+if [ $? -eq 0 ] ; then
     echo "No Error!"
+else
+    echo "Error! Please check the log!"
 fi
+
+echo "Check finished!"
